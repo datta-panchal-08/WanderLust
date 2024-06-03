@@ -1,0 +1,15 @@
+input[type="text"],
+input[type="number"] {
+    border: 1px solid rgba(0, 0, 0, 0.247);
+    border-radius: 8px;
+    outline-color: rgb(0, 140, 255);
+}
+label{
+    font-weight: bold;
+}
+
+textarea{
+    border: 1px solid rgba(0, 0, 0, 0.247);
+    border-radius: 8px;
+    outline-color: rgb(0, 140, 255);
+}
