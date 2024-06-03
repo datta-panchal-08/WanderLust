@@ -1,0 +1,22 @@
+
+<ul *ngIf="listing" class="mt-[3rem] px-[4rem] flex gap-3">
+         <div class="image  w-[50%] h-[70%]">
+            <img class="h-[30.5rem] hover:opacity-[0.8] hover:cursor-pointer w-full shadow-black object-cover object-center rounded-[2.5rem]" [src]="listing.image" [alt]="listing.title">
+         </div>
+        <div class="details w-[50%] p-3 h-[70%] ml-4 mt-8">
+             <h2 class="text-[1.4rem] text-red-500 font-bold bg-zinc-50 w-fit px-3 py-1 rounded-full">{{listing.title}}</h2>    
+             <p class="text-md mt-6 font-semibold text-amber-500">{{listing.description}}</p>
+
+             <div class="location flex gap-4 mt-6">
+                <h3 class="font-bold bg-zinc-100 text-[1.1rem] text-blue-500 px-4 py-1 rounded-full">{{listing.country}}</h3>
+                 <h3 class="font-bold bg-zinc-100 text-[1.1rem]  text-blue-500 px-4 py-1 rounded-full">{{listing.location}}</h3>
+             </div>
+               
+             <h3 class="text-[2rem] text-red-500 mt-6 flex items-center gap-[1px]">Price: <span>₹</span>{{listing.price}}</h3>
+
+              <div class="buttons">
+                <button class="bg-red-600 hover:bg-red-700 text-[1.1rem] font-semibold text-white rounded-full w-[20rem] h-[2.5rem] mt-7">Add To Cart</button>
+              </div>
+            </div>
+
+</ul>
