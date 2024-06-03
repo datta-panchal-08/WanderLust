@@ -1,0 +1,36 @@
+.header{
+    border: 1px solid black;
+}
+
+h1{
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    font-family: "Montserrat";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1:hover{
+    background-color: rgb(255, 36, 36);
+    color: white;
+    height: 100%;
+}
+
+nav{
+    height: 100%;
+}
+
+nav>li{
+    list-style-type: none;
+    font-size: 1.1rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+}
+nav>li:hover{
+    background-color: rgb(255, 36, 36);
+    color: white;
+    height: 100%;
+}
