@@ -1,0 +1,40 @@
+<div class="w-full h-screen flex flex-col items-center mt-3">
+    <h3 class="mb-5 bg-white shadow-md w-[28rem] font-bold rounded-md text-center py-2 text-2xl shadow-black">Add
+        Listing</h3>
+    <form [formGroup]="listingGroup" (submit)="onSubmit()" class="bg-white shadow-md w-[28rem] px-3 py-3 mb-8  shadow-black rounded-md">
+        <div class="form-group flex flex-col gap-1">
+            <label>Title</label>
+            <input class="py-1 px-4" type="text" formControlName="title">
+            <div *ngIf="listingGroup.get('title')?.hasError('required') && listingGroup.get('title')?.touched">
+                <p class="text-red-700 font-semibold">Title Is Required</p>
+            </div>
+            <label>ImageUrl</label>
+            <input class="py-1 px-4" type="text" formControlName="imageUrl">
+            <div *ngIf="listingGroup.get('imageUrl')?.hasError('required') && listingGroup.get('imageUrl')?.touched">
+                <p class="text-red-700 font-semibold">imageUrl Is Required</p>
+            </div>
+            <label>Location</label>
+            <input class="py-1 px-4" type="text" formControlName="location">
+            <div *ngIf="listingGroup.get('location')?.hasError('required') && listingGroup.get('location')?.touched">
+                <p class="text-red-700 font-semibold">Location Is Required</p>
+            </div>
+            <label>Country</label>
+            <input class="py-1 px-4" type="text" formControlName="country">
+            <div *ngIf="listingGroup.get('location')?.hasError('required') && listingGroup.get('location')?.touched">
+                <p class="text-red-700 font-semibold">Country Is Required</p>
+            </div>
+            <label>Price</label>
+            <input class="py-1 px-4" type="number" formControlName="price">
+            <div *ngIf="listingGroup.get('price')?.hasError('required') && listingGroup.get('price')?.touched">
+                <p class="text-red-700 font-semibold">Price Is Required</p>
+            </div>
+            <label>Description</label>
+            <textarea class="py-1 px-4 resize-none" type="text" formControlName="description"></textarea>
+            <div
+                *ngIf="listingGroup.get('description')?.hasError('required') && listingGroup.get('description')?.touched">
+                <p class="text-red-700 font-semibold">Description Is Required</p>
+            </div>
+        </div>
+        <button class="px-6 py-1 mt-3 bg-green-500 rounded-md text-white font-semibold ">Submit</button>
+    </form>
+</div>
